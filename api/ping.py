@@ -2,7 +2,7 @@ import socket
 import urllib.request
 from http.server import BaseHTTPRequestHandler
 
-PING_URL = "https://hc-ping.com/4f9a5abf-38d6-4f34-a698-9e97c3a62632"
+PING_URL = "https://hc-ping.com/a4b80e88-d7ab-4edc-ad3e-9cd57036075e"
 
 
 def do_ping():
