@@ -1,0 +1,37 @@
+name: Health Check Ping
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping 1
+        run: curl -fsS --retry 3 https://hc-ping.com/a4b80e88-d7ab-4edc-ad3e-9cd57036075e
+
+      - name: Wait 2 min
+        run: sleep 120
+
+      - name: Ping 2
+        run: curl -fsS --retry 3 https://hc-ping.com/a4b80e88-d7ab-4edc-ad3e-9cd57036075e
+
+      - name: Wait 2 min
+        run: sleep 120
+
+      - name: Ping 3
+        run: curl -fsS --retry 3 https://hc-ping.com/a4b80e88-d7ab-4edc-ad3e-9cd57036075e
+
+      - name: Wait 2 min
+        run: sleep 120
+
+      - name: Ping 4
+        run: curl -fsS --retry 3 https://hc-ping.com/a4b80e88-d7ab-4edc-ad3e-9cd57036075e
+
+      - name: Wait 2 min
+        run: sleep 120
+
+      - name: Ping 5
+        run: curl -fsS --retry 3 https://hc-ping.com/a4b80e88-d7ab-4edc-ad3e-9cd57036075e
